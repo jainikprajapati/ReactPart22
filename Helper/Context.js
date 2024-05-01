@@ -1,15 +1,16 @@
-// "use client"
-// import React, {Children, createContext} from 'react'
-// export const MyContext = createContext()
-// const Context = () => {
-//     const usernamecontext = "Jainik Prajapati"
-//   return (
-//     <div>
-//         <MyContext.Provider value={usernamecontext}>
-//             {Children}
-//         </MyContext.Provider>
-//     </div>
-//   )
-// }
+ "use client"
+ import React, { createContext } from 'react'
+ export const MyContext = createContext()
 
-// export default Context
+ const Context = ({children}) => {
+    const contextuser = "Jainik Context"
+   return (
+     <div>
+        <MyContext.Provider value={contextuser}>
+            {children}
+        </MyContext.Provider>
+     </div>
+   )
+ }
+ 
+ export default Context
